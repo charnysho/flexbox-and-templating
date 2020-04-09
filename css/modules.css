@@ -1,0 +1,39 @@
+h1 {
+  font-family: 'Comic Neue', cursive;
+  font-size: 90px;
+}
+
+p {
+  font-family: 'Gotu', sans-serif;
+}
+
+#dropdown-menu, #sort-menu {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: aquamarine;
+}
+
+#next, #prev {
+  background-color: aquamarine;
+}
+
+.image h2 {
+  font-size: 50px;
+  font-family: 'Gotu', sans-serif;
+  padding: 5px;
+}
+
+.image p {
+  font-size: 20px;
+  padding: 5px;
+  margin-top: 2px;
+  margin-bottom: 60px;
+}
+
+.image {
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
