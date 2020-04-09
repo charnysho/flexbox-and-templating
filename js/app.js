@@ -30,24 +30,24 @@ $('#sort-menu').change(function() {
   $.ajax(currentPage).then(data => {
     data.forEach(element => {
       objectsArray.push(element);
-  })
-
-  if(selectedSorting === 'title') {
-    objectsArray.sort(function(a, b){
-      if (a.title < b.title) return -1;
-      if (a.title > b.title) return 1;
-      return 0;
     });
-  }
 
-  if (selectedSorting === 'number of horns') {
-    objectsArray.sort(function(a, b){
-      if (a.horns < b.horns) return -1;
-      if (a.horns > b.horns) return 1;
-    });
-  }
-    
-  renderData(objectsArray);
+    if(selectedSorting === 'title') {
+      objectsArray.sort(function(a, b){
+        if (a.title < b.title) return -1;
+        if (a.title > b.title) return 1;
+        return 0;
+      });
+    }
+
+    if (selectedSorting === 'number of horns') {
+      objectsArray.sort(function(a, b){
+        if (a.horns < b.horns) return -1;
+        if (a.horns > b.horns) return 1;
+      });
+    }
+
+    renderData(objectsArray);
   });
 });
 
@@ -74,12 +74,12 @@ function renderFile(jsonFile) {
 }
 
 function renderData(data) {
-  $("#template").empty();
+  $('#template').empty();
   data.forEach(addValuesToSection);
 }
 
 function addDropdownValues(jsonFile) {
-  $("#dropdown-menu").empty();
+  $('#dropdown-menu').empty();
   $.ajax(jsonFile).then(data => {
     let keywordArray = [];
     data.forEach(element => {
