@@ -1,10 +1,10 @@
 'use strict';
 
-let page1 = '/data/page-1.json';
-let page2 = '/data/page-2.json';
+let page1 = './data/page-1.json';
+let page2 = './data/page-2.json';
 let currentPage = page1;
 
-let template = $('#images').html();
+const template = $('#images').html();
 
 const addValuesToSection = (item) => {
   const renderedTemplate = Mustache.render(template, item);
